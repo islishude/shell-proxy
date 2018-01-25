@@ -15,7 +15,8 @@ linux 以及 Mac 在命令行中使用的代理的方式很简单，就是给 `h
 # github.com/lishude/shell-proxy
 export http_proxy=$url
 export https_proxy=$url
-export alias poff='unset http_proxy;unset https_proxy
+# 如果代理失效的话直接运行 poff 即可断开 proxy
+export alias poff='unset http_proxy;unset https_prox'
 ```
 
 如果你觉得麻烦可以使用本库提供的脚本。
