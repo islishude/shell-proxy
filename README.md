@@ -27,7 +27,7 @@ export alias poff='unset http_proxy;unset https_prox'
 git clone https://github.com/islishude/shell-proxy.git ~/shell-proxy
 cd ~/shell-proxy
 # 可能需要管理员权限
-sudo sh add-proxy.sh
+sudo ./add-proxy.sh
 # 测试
 sh test-proxy.sh
 ```
@@ -39,7 +39,7 @@ sh test-proxy.sh
 # Window
 git clone https://github.com/islishude/shell-proxy.git ~/shell-proxy
 cd ~/shell-proxy
-sh windows-proxy.sh
+./windows-proxy.sh
 # 测试
 sh test-proxy.sh
 ```
