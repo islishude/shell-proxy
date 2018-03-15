@@ -5,7 +5,7 @@
 - [x] ShellTool
 
 ## 原理
-linux 以及 Mac 在命令行中使用的代理的方式很简单，就是给 `http_proxy` 以及 `https_proxy` 初始化即可。关于 Windows PowerShell 我还没找到好的方式，不过使用 Git Bash 即可替代。
+在命令行中使用的代理的方式很简单，就是给 `http_proxy` 以及 `https_proxy` 初始化即可。~关于 Windows PowerShell 我还没找到好的方式，不过使用 Git Bash 即可替代~。
 
 ## 步骤
 特别简单，只要在用户家目录下的 `.bashrc` 或 `.bash_profile` （ZSH 对应 `.zshrc` 以及 `.zsh_profile`）输入一下内容即可。其中 `$url` 就是代理地址。
@@ -32,8 +32,7 @@ sudo ./add-proxy.sh
 sh test-proxy.sh
 ```
 
-### Windows
-需要打开 Git Bash 使用
+### Windows Git Bash
 
 ```bash
 # Window
@@ -42,6 +41,23 @@ cd ~/shell-proxy
 ./windows-proxy.sh
 # 测试
 sh test-proxy.sh
+```
+
+### Windows PowerShell
+
+```bash
+set http_proxy YOUR-PROXY
+set https_proxy YOUR-PROXY
+
+set proxy myproxy
+set proxy myproxy:80 "<local>bar"
+set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="*.contoso.com"
+
+
+netsh winhttp set proxy myproxy
+netsh winhttp set proxy myproxy:80 "<local>bar"
+netsh winhttp set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="*.contoso.com"
+netsh winhttp reset proxy
 ```
 
 # 说明
