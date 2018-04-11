@@ -50,16 +50,6 @@ sh test-proxy.sh
 ```bash
 set http_proxy YOUR-PROXY
 set https_proxy YOUR-PROXY
-
-set proxy myproxy
-set proxy myproxy:80 "<local>bar"
-set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="*.contoso.com"
-
-
-netsh winhttp set proxy myproxy
-netsh winhttp set proxy myproxy:80 "<local>bar"
-netsh winhttp set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="*.contoso.com"
-netsh winhttp reset proxy
 ```
 
 # 说明
