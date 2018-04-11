@@ -19,6 +19,8 @@ export https_proxy=$url
 export alias poff='unset http_proxy;unset https_prox'
 ```
 
+如果使用 ss 可以直接将 http_proxy_url 设置成 `localhost:1080`,自定义的话可以打开 ss 的偏好设置，http 选项卡设置 http 代理监听端口即可。
+
 如果你觉得麻烦可以使用本库提供的脚本。
 
 ## 使用
