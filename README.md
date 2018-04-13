@@ -60,7 +60,9 @@ set https_proxy YOUR-PROXY
 `.bashrc` 在每次打开命令行工具时就加载，而 `.bash_profile` 仅在用户登录时候加载一次。
 
 ## Windows 设置
-在 Windows 下使用 Git Bash 的时候要注意，每次打开 Git Bash 的行为就是登录用户，如果你留意的话，在每次打开 Git Bash 的时候回一闪而过 login 的字样，所以上面的步骤需要在用户家目录新建 `.bash_profile` 并写入，单独使用 `.bashrc` 会报错。
+在 Windows 下使用 Git Bash 的时候要注意，每次打开 Git Bash 的行为就是登录用户，如果你留意的话，在每次打开 Git Bash 的时候回一闪而过 login 的字样，~所以上面的步骤需要在用户家目录新建 `.bash_profile` 并写入，单独使用 `.bashrc` 会报错~，在 VSCode 中设置 .bash_proxy 加载不出来，但是设置 .bashrc 可以。
+
+所有需要建立空的 `.bash_profile`，然后把 proxy 设置写入  `.bashrc` 即可。
 
 ## Windows IDE 中使用 Git bash
 目前最常用的编辑器就属 VS Code 了，在 Code Windows 下默认使用 PowerShell 或者 CMD 命令工具，当然如果我们安装了其它 shell 也是可以进行设置默认 shell 的。方法很简单，使用快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>，然后输入 `shell` 选择默认 shell 命令即可。
