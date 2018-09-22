@@ -66,3 +66,15 @@ set https_proxy YOUR-PROXY
 
 ## Windows IDE 中使用 Git bash
 目前最常用的编辑器就属 VS Code 了，在 Code Windows 下默认使用 PowerShell 或者 CMD 命令工具，当然如果我们安装了其它 shell 也是可以进行设置默认 shell 的。方法很简单，使用快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>，然后输入 `shell` 选择默认 shell 命令即可。
+
+`.bashrc` 在每次打开命令行工具时就加载，而 `.bash_profile` 仅在用户登录时候加载一次。
+
+## 补充0
+
+设置 http 和 https 代理有个更简单的。
+
+直接设置 `export ALL_PROXY=socks5://127.0.0.1` 即可。
+
+## 补充1
+
+mac 下的 ss 服务 http 的端口默认 1080 而 socks5 的则是 1086 端口。
