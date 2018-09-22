@@ -73,7 +73,7 @@ set https_proxy YOUR-PROXY
 
 设置 http 和 https 代理有个更简单的。
 
-直接设置 `export ALL_PROXY=socks5://127.0.0.1` 即可。
+直接设置 `export ALL_PROXY=socks5://127.0.0.1:1080` 即可。
 
 ## 补充1
 
