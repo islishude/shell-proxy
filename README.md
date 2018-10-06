@@ -13,13 +13,15 @@
 ```bash
 # 代理设置
 # github.com/lishude/shell-proxy
-export http_proxy=$url
-export https_proxy=$url
+# export http_proxy=$url
+# export https_proxy=$url
 # 如果代理失效的话直接运行 poff 即可断开 proxy
 export alias poff='unset http_proxy;unset https_prox'
+# 快捷方式打开
+export alias pon='export http_proxy=$url;export https_proxy=$http_proxy'
 ```
 
-如果使用 ss 可以直接将 http_proxy_url 设置成 `localhost:1080`，自定义的话可以打开 ss 的偏好设置，http 选项卡设置 http 代理监听端口即可。
+如果使用 ss 可以直接将 http_proxy_url 设置成 `http://127.0.0.1:1080`，自定义的话可以打开 ss 的偏好设置，http 选项卡设置 http 代理监听端口即可。
 
 如果你觉得麻烦可以使用本库提供的脚本。
 
