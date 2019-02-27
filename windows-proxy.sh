@@ -9,5 +9,4 @@ echo "
 export http_proxy=$url
 export https_proxy=$url
 export alias poff='unset http_proxy;unset https_proxy'" >> ~/.bash_profile
-#echo url >> $USER/.bashrc
 echo "配置代理成功，请退出当前 Shell，然后运行 test-proxy.sh 进行测试即可"

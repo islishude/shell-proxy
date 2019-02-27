@@ -5,20 +5,18 @@
 - [x] ShellTool
 
 ## 原理
-在命令行中使用的代理的方式很简单，就是给 `http_proxy` 以及 `https_proxy` 初始化即可。~关于 Windows PowerShell 我还没找到好的方式，不过使用 Git Bash 即可替代~。
+在命令行中使用的代理的方式很简单，就是给 `http_proxy` 以及 `https_proxy` 初始化即可。
 
 ## 步骤
 特别简单，只要在用户家目录下的 `.bashrc` 或 `.bash_profile` （ZSH 对应 `.zshrc` 以及 `.zsh_profile`）输入一下内容即可。其中 `$url` 就是代理地址。
 
 ```bash
 # 代理设置
-# github.com/lishude/shell-proxy
-# export http_proxy=$url
-# export https_proxy=$url
+url=http://127.0.0.1:1080
 # 如果代理失效的话直接运行 poff 即可断开 proxy
-export alias poff='unset http_proxy;unset https_proxy'
+alias poff='unset http_proxy;unset https_proxy'
 # 快捷方式打开
-export alias pon='export http_proxy=$url;export https_proxy=$http_proxy'
+alias pon='export http_proxy=$url;export https_proxy=$url'
 ```
 
 如果使用 ss 可以直接将 http_proxy_url 设置成 `http://127.0.0.1:1080`，自定义的话可以打开 ss 的偏好设置，http 选项卡设置 http 代理监听端口即可。
