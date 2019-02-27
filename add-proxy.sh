@@ -4,7 +4,7 @@ echo "请输入代理地址"
 read url
 echo "
 # 代理设置
-# github.com/lishude/shell-proxy
+# github.com/islishude/shell-proxy
 export http_proxy=$url
 export https_proxy=$url
 export alias poff='unset http_proxy;unset https_proxy'" >> ~/.bashrc

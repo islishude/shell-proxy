@@ -5,7 +5,7 @@ read url
 touch ~/.bash_profile
 echo "
 # 代理设置
-# github.com/lishude/shell-proxy
+# github.com/islishude/shell-proxy
 export http_proxy=$url
 export https_proxy=$url
 export alias poff='unset http_proxy;unset https_proxy'" >> ~/.bash_profile
