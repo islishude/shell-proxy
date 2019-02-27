@@ -16,7 +16,7 @@
 # export http_proxy=$url
 # export https_proxy=$url
 # 如果代理失效的话直接运行 poff 即可断开 proxy
-export alias poff='unset http_proxy;unset https_prox'
+export alias poff='unset http_proxy;unset https_proxy'
 # 快捷方式打开
 export alias pon='export http_proxy=$url;export https_proxy=$http_proxy'
 ```
