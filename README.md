@@ -58,9 +58,9 @@ set http_proxy=
 
 ## VSCode
 
-打开设置，选择 Applicaion-Proxy，注意这里需要关闭 `Proxy Strict SSL`。
+打开设置，选择 Applicaion-Proxy，注意这里保持 `Proxy Strict SSL`，关闭可能导致某些插件不能正常工作。
 
-![image](https://user-images.githubusercontent.com/24730006/53539060-07259400-3b4b-11e9-800c-fd9cf53e2552.png)
+![image](https://user-images.githubusercontent.com/24730006/54330200-c2702180-464f-11e9-8a67-ad117e2ea0fb.png)
 
 在 VSCode Windows 下默认使用 PowerShell 或者 CMD 命令工具，当然也可以设置成 GitBash 的。方法很简单，使用快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>，然后输入 `shell` 选择默认 shell 命令即可。
 
@@ -79,3 +79,4 @@ git config –global –unset http.proxy
 # 取消 git 的代理相关设置
 git config –global –unset https.proxy
 ```
+
