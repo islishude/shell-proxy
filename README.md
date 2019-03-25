@@ -52,7 +52,7 @@ set https_proxy=YOUR-PROXY
 set http_proxy=
 ```
 
-在 Windows 下使用 Git Bash 的时候要注意，需要使用 `.bash_profile` 而不是 `.bashrc`。
+在 Windows 下使用 Git Bash 则配置方式和 Mac/Linux 一致，不过需要注意的需要在 `.bash_profile` 而不是 `.bashrc` 中进行配置。
 
 因为如果你留意的话在每次打开 Git Bash 的时候回一闪而过 login 的字样，而 `.bashrc` 在每次打开命令行工具时就加载，而 `.bash_profile` 仅在用户登录时候加载一次，所以每次打开 GitBash 的行为就是登录用户。
 
