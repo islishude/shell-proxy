@@ -2,7 +2,7 @@
 
 ## Mac 和 Linux
 
-类 Unix 环境下设置代理特别简单，只要在用户家目录下的 `.bashrc` 或 `.bash_profile` （ZSH 对应 `.zshrc` 以及 `.zsh_profile`）输入以下内容即可。其中 `$url` 就是代理地址。
+类 Unix 环境下设置代理特别简单，只要在用户家目录下的 `.bashrc` 或 `.bash_profile` （ZSH 对应 `.zshrc` 以及 `.zsh_profile`）设置 `http_proxy` 和 `https_proxy` 环境变量到代理地址即可，如下所示，其中 `$url` 就是代理地址。
 
 ```bash
 # 代理设置
@@ -13,7 +13,17 @@ alias poff='unset http_proxy;unset https_proxy'
 alias pon='export http_proxy=$url; export https_proxy=$url'
 ```
 
-如果使用 Shadowsocks ，那么上面的 `url` 就是 `http://127.0.0.1:1080`，自定义端口可以打开 Shadowsocks 的偏好设置，http 选项卡设置 http 代理监听端口即可。
+这里我设置了别名，需要使用代理的时候直接运行 `pon` 即可打开代理，而运行 `poff` 则关闭代理。
+
+或者你可以直接可以设置只要打开 Termial 就使用代理的话去掉 `alias` 命令即可。
+
+```bash
+url=http://127.0.0.1:1080
+export http_proxy=$url;
+export https_proxy=$url；
+```
+
+这里我使用的是 Shadowsocks ，所以这里的 `url` 是 `http://127.0.0.1:1080`。如果你需要自定义端口可以打开 Shadowsocks 的偏好设置，http 选项卡设置 http 代理监听端口即可。
 
 **注意：Mac 下的 ShadowsocksX-NG 的 HTTP 代理服务器端口默认 1087 而 socks5 的则是 1086 端口。**
 
