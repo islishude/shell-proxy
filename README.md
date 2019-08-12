@@ -74,6 +74,8 @@ set http_proxy=
 
 在 VSCode Windows 下默认使用 PowerShell 或者 CMD 命令工具，当然也可以设置成 GitBash 的。方法很简单，使用快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>，然后输入 `shell` 选择默认 shell 命令即可。
 
+在这里 vscode 使用正则限制了 proxy url，只能输入 http/https 开头的地址，但是是可以输入并使用 socks5，只需要点击右上角 `{}` 符号切换到 json 配置界面设置 socks5 开头的地址，然后忽略错误就可以了。
+
 ## Git
 
 ```
