@@ -6,7 +6,7 @@
 
 ```bash
 # 代理设置
-url=http://127.0.0.1:1080
+url=http://127.0.0.1:7890
 # 如果代理失效的话直接运行 poff 即可断开 proxy
 alias poff='unset http_proxy;unset https_proxy'
 # 快捷方式打开
@@ -18,16 +18,12 @@ alias pon='export http_proxy=$url; export https_proxy=$url'
 或者你可以直接可以设置只要打开 Termial 就使用代理的话去掉 `alias` 命令即可。
 
 ```bash
-url=http://127.0.0.1:1080
-export http_proxy=$url;
-export https_proxy=$url；
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
 ```
 
-这里我使用的是 Shadowsocks ，所以这里的 `url` 是 `http://127.0.0.1:1080`。如果你需要自定义端口可以打开 Shadowsocks 的偏好设置，http 选项卡设置 http 代理监听端口即可。
+这里我使用的是 clashx ，所以这里的 `url` 是 `http://127.0.0.1:7890`。如果你需要自定义端口可以打开 ClashX Dashboard Setting 配置相关端口即可。
 
-**注意：Mac 下的 ShadowsocksX-NG 的 HTTP 代理服务器端口默认 1087 而 socks5 的则是 1086 端口。**
-
-在 Linux 下有个比设置 http 和 https 代理有个更简单的，可以直接设置 `export ALL_PROXY=socks5://127.0.0.1:1080` 就行了。
+在 Linux 下有个比设置 http 和 https 代理有个更简单的，可以直接设置 `export ALL_PROXY=socks5://127.0.0.1:7890` 就行了。
 
 最后测试一下连接，如果出现以下情况即说明设置成功。
 
@@ -47,6 +43,8 @@ x-xss-protection: 1; mode=block
 x-frame-options: SAMEORIGIN
 alt-svc: quic=":443"; ma=2592000; v="44,43,39"
 ```
+
+由于 ClashX 可以对系统内直接配置代理，一般不需要再次在 Terminal 中额外配置。
 
 ## 忽略对网段的代理
 
@@ -107,6 +105,7 @@ git config –global –unset https.proxy
 
 在虚拟机中可以开启 ss 然后设置代理，基本流程和上述一致。但是如果想要连接宿主机的代理服务的话也很简单。首先在宿主机中的 ss 设置允许其它设备访问，然后代理设置成宿主机的 IP 即可。虚拟机的网络设置最好设置成桥接模式，这样主机和虚拟机就会在一个网络段，可以互相直连。
 
-## Docker
+## ClashX
 
-see [islishude/shadowsocks](https://github.com/islishude/shadowsocks#shadowsocks-dockerfile)
+- 项目 https://github.com/yichengchen/clashX
+- 规则推荐 https://github.com/Loyalsoldier/clash-rules
